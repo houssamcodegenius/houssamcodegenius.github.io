@@ -1,0 +1,140 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(circle, #0f0f0f, #000000);
+}
+
+#starry-night {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 50%;
+  animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+      opacity: 0.8;
+  }
+  50% {
+      opacity: 0.2;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .profile-picture {
+    vertical-align: middle;
+    height: 164px;
+    width: 164px;
+    border-radius: 50%;
+    background-color: #b8b8b8;
+    background-image: url(assets/pp.png);
+    background-size: cover;
+    margin-bottom: -10px;
+  }
+
+  h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: -15px;
+    text-align: center;
+  }
+
+  p {
+    font-family: "Nunito", sans-serif;
+    font-size: 21px;
+    color: #b8b8b8;
+    max-width: 700px;
+    text-align: center;
+  }
+
+  .btn-list {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 10px;
+
+    a {
+      width: 110px;
+      height: 22px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      text-align: center;
+      color: black;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #bebebe;
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 425px) {
+  main {
+    padding: 0 20px;
+
+    .profile-picture {
+      height: 120px;
+      width: 120px;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 80%;
+    }
+  }
+
+  .btn-list {
+    flex-direction: column;
+  }
+}
