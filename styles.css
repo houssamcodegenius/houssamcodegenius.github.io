@@ -132,9 +132,15 @@ footer {
       font-size: 18px;
       max-width: 80%;
     }
+    
+    .btn-list {
+      flex-direction: column;
+    }
   }
 
-  .btn-list {
-    flex-direction: column;
+  footer {
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 12px;
   }
 }
