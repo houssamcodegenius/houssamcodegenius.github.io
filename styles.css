@@ -144,3 +144,27 @@ footer {
     font-size: 12px;
   }
 }
+
+@media only screen and (max-height: 425px) {
+  main {
+    .profile-picture {
+      height: 84px;
+      width: 84px;
+    }
+
+    h1 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .btn-list {
+      a {
+        height: 18px;
+        width: 110px;
+      }
+    }
+  }
+}
